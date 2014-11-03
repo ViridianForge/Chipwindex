@@ -1,0 +1,30 @@
+{
+  "records": [
+    {
+      "Title":"Indigo",
+      "Artist":"Tri Angles",
+      "Available At":"https://itsmisterangles.bandcamp.com/album/indigo",
+      "Release Date":"10/1/2014"
+    },
+    {
+      "Title":"Picture Match EP",
+      "Artist":"dj masterkohta",
+      "Available At":"https://1h1d.bandcamp.com/album/picture-match-ep",
+      "Release Date":"10/1/2014"
+    },
+    {
+      "Title":"Tower of Heaven Cover Album",
+      "Artist":"Foilverb",
+      "Available At":"https://bigbrother404.bandcamp.com/album/tower-of-heaven-cover-album",
+      "Release Date":"10/1/2014"
+    },
+    {
+      "Title":"88:88",
+      "Artist":"Various Artists",
+      "Available At":"https://telefuturenow.bandcamp.com/album/88-88-remixes",
+      "Release Date":"10/3/2014"
+    }
+  ],
+  "queryRecordCount":4,
+  "totalRecordCount":4
+}
