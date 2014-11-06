@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
   $('#chipcharttable').DataTable({
-    "ajax": "Database/chipchart.json",
+    "ajax": "Database/chartList.json",
     "order":[[2,"desc"]],
     "columns": [
       { "title": "Album" },
