@@ -4,7 +4,7 @@
 $(document).ready(function() {
   $('#chipcharttable').DataTable({
     "ajax": {
-      "url": "Database/chartList.json",
+      "url": "Database/Processed/chartList.json",
       "dataSrc":"chartData"
     },
     "order":[[2,"desc"]],
