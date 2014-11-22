@@ -8,7 +8,7 @@ div#banner{
 	position: absolute;
 	top: 0%;
 	width:70%
-	height:20%;
+	height:15%;
 	left: 15%;
 }
 
@@ -20,7 +20,7 @@ img#logo{
 
 div#app{
 	position: absolute;
-	top: 20%;
+	top: 15%;
 	left: 15%;
 }
 
