@@ -2,13 +2,19 @@
 * Chipchart Page styles
 */
 
+/*
+* Set background image
+*/
+body{
+	background-color: transparent;
+	background-image: url('./Images/CW-Side-background-art-redux-ver2.jpg') repeat;
+}
+
 /* Logo Bar positioning and styling */
 
 div#banner{
 	position: absolute;
 	top: 0%;
-	width:70%
-	height:15%;
 	left: 15%;
 }
 
@@ -36,6 +42,7 @@ div#instructions{
 
 div#chartdiv{
 	position: relative;
+	text-align: right;
 	top: 0%;
 	left: 20%;
 }
