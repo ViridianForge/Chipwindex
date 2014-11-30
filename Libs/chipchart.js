@@ -1,37 +1,18 @@
 
-// Function to convert the CSV flat file into a json variable
-
-function csv2DTJson(csvData){
-
-	var lines=csv.split("\n");
- 	var result = [];
- 
-	var headers=lines[0].split(",");
- 
-	for(var i=1;i<lines.length;i++){
-	
-		var obj = {};
-		var currentline=lines[i].split(",");
- 
-		for(var j=0;j<headers.length;j++){
-			obj[headers[j]] = currentline[j];
-		}
- 
-		result.push(obj); 
-
-	return json.stringify(result)
-}
-
-//This snippet here is where we actually render the table.
-
 $(document).ready(function() {
-
-	var csvDB = '';
-	
-	dbJSON = csv2DTJson(csvDB);
 
 	// We might need a touch right here to grab the size elements
 	// of the submission form and alter them to better match the screen
+	$("#subForm").width($(window).width()*0.2);
+	$("#subForm").height($(window).height());
+	
+	console.log("Attempting to get JSON.")
+	//Grab the data from the publically available copy of the ChipChart master database
+	$.getJSON("https://spreadsheets.google.com/feeds/list/1fSwmSAB-qluTvy8YiTgunHKFbJsKMLg36xDNp8uhFIk/od6/public/values?alt=json",function(data){
+		//Test Print
+		console.log(data.feed.entry[0]['gsx$title']['$t']);
+		console.log("Success.");
+	});
 
   $('#chipcharttable').DataTable({
     "ajax": {
@@ -40,11 +21,11 @@ $(document).ready(function() {
     },
     "order":[[2,"desc"]],
     "columns": [
-      { "title": "Album" },
+      { "title": "Title" },
       { "title": "Artist" },
 	  { "title": "Label" },
       { "title": "Release Date"},
-	  { "title": "Art"}
+	  { "title": "Available At"}
     ]
     });
 });
