@@ -16,16 +16,19 @@ $(document).ready(function() {
 		//	console.log(val);
 		//});
 		//console.log("Success.");
-	});
+	//});
 
 	//Major props on helping figure out populating a DataTables table from Google Sheets to raza
 	//from:  http://datatables.net/forums/discussion/5611/how-to-grab-datatables-data-from-a-google-spreadsheet
+	
+	//Original sAjaxSource
+	//"<a href="https://spreadsheets.google.com/feeds/list/1fSwmSAB-qluTvy8YiTgunHKFbJsKMLg36xDNp8uhFIk/od6/public/values?alt=json"" target="_blank" rel="nofollow">https://spreadsheets.google.com/feeds/list/1fSwmSAB-qluTvy8YiTgunHKFbJsKMLg36xDNp8uhFIk/od6/public/values?alt=json"</a>",
 	
   $('#chipcharttable').DataTable({
     "bServerSide":false,
 	"bProcessing":true,
 	"sAjaxDataProp":"feed.entry",
-	"sAjaxSource":"<a href="https://spreadsheets.google.com/feeds/list/1fSwmSAB-qluTvy8YiTgunHKFbJsKMLg36xDNp8uhFIk/od6/public/values?alt=json"" target="_blank" rel="nofollow">https://spreadsheets.google.com/feeds/list/1fSwmSAB-qluTvy8YiTgunHKFbJsKMLg36xDNp8uhFIk/od6/public/values?alt=json"</a>",
+	"sAjaxSource":"https://spreadsheets.google.com/feeds/list/1fSwmSAB-qluTvy8YiTgunHKFbJsKMLg36xDNp8uhFIk/od6/public/values?alt=json",
 	"aoColums": [
 		{ "mDataProp": "gsx$title.$t"},
 		{ "mDataProp": "gsx$artist.$t"},
