@@ -17,12 +17,14 @@ $(document).ready(function() {
 	"bProcessing":true,
 	"sAjaxDataProp":"feed.entry",
 	"sAjaxSource":"https://spreadsheets.google.com/feeds/list/1fSwmSAB-qluTvy8YiTgunHKFbJsKMLg36xDNp8uhFIk/od6/public/values?alt=json",
-	"aoColums": [
-		{ "mDataProp": "gsx$title.$t"},
-		{ "mDataProp": "gsx$artist.$t"},
-		{ "mDataProp": "gsx$label.$t"},
-		{ "mDataProp": "gsx$releasedate.$t"},
-		{ "mDataProp": "gsx$availableat.$t"}
+	"aoColumns":[
+		{ "mData": "gsx$title.$t"},
+		{ "mData": "gsx$artist.$t"},
+		{ "mData": "gsx$label.$t"},
+		{ "mData": "gsx$releasedate.$t"},
+		{ "mData": "gsx$availableat.$t"}
 	]
+	//"aoColumsDef": "_all"
+
     });
 });
