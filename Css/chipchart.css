@@ -8,7 +8,7 @@
 body{
 	width: 100%;
 	height: 100%;
-	background: #000000 url(/Images/CW-Side-background-art-redux-ver2.jpg) top left repeat;
+	background: url("../Images/CW-Side-background-art-redux-ver2.jpg") #000000 top left repeat;
 }
 
 /* Logo Bar positioning and styling */
