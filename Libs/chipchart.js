@@ -4,7 +4,7 @@ $(document).ready(function() {
 	// We might need a touch right here to grab the size elements
 	// of the submission form and alter them to better match the screen
 	$("#subForm").width($(window).width()*0.2);
-	$("#subForm").height($(window).height());
+	$("#subForm").height($(window).height()*0.9);
 	
 	//Major props on helping figure out populating a DataTables table from Google Sheets to raza
 	//from:  http://datatables.net/forums/discussion/5611/how-to-grab-datatables-data-from-a-google-spreadsheet
@@ -23,7 +23,8 @@ $(document).ready(function() {
 		{ "mData": "gsx$label.$t"},
 		{ "mData": "gsx$releasedate.$t"},
 		{ "mData": "gsx$availableat.$t"}
-	]
+	],
+	"iDisplayLength":20
 	//"aoColumsDef": "_all"
 
     });
