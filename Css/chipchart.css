@@ -43,11 +43,21 @@ div#instructions{
 	left: 0%;
 }
 
+div#signature{
+	position: relative;
+	width: 100%;
+	top: 80%;
+	left: 0%;
+	background: #aaaaaa;
+	border-radius: 4px;
+	color: #229933;
+}
+
 div#app{
 	position: absolute;
 	margin-left: 1%;
 	width: 80%;
-	top: 10%;
+	top: 5%;
 	left: 25%;
 }
 

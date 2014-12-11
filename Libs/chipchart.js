@@ -23,8 +23,8 @@ $(document).ready(function() {
 		{ "mData": "gsx$label.$t"},
 		{ "mData": "gsx$releasedate.$t"},
 		{ "mData": "gsx$availableat.$t"}
-	],
-	"iDisplayLength":20
+	]
+	//"iDisplayLength":20
 	//"aoColumsDef": "_all"
 
     });

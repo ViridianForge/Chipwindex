@@ -347,7 +347,7 @@ table.dataTable td {
   .dataTables_wrapper .dataTables_info,
   .dataTables_wrapper .dataTables_processing,
   .dataTables_wrapper .dataTables_paginate {
-    color: #666666; }
+    color: #333333; }
   .dataTables_wrapper .dataTables_scroll {
     clear: both; }
     .dataTables_wrapper .dataTables_scroll div.dataTables_scrollBody {
@@ -363,6 +363,7 @@ table.dataTable td {
 	background-color: #ffffff;
 	padding: 2px;
 	border: 2px solid #333333;
+	border-radius: 4px;
 	box-shadow: -3px -3px 1px 1px #111111;
   }
   .dataTables_wrapper.no-footer .dataTables_scrollBody {
