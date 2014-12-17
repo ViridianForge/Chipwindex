@@ -19,9 +19,14 @@ $(document).ready(function() {
 	"sAjaxSource":"https://spreadsheets.google.com/feeds/list/1fSwmSAB-qluTvy8YiTgunHKFbJsKMLg36xDNp8uhFIk/od6/public/values?alt=json",
 	"aoColumns":[
 		{ "mData": "gsx$title.$t"},
+		{ "mData": "gsx$artistname.$t", "visible":false},
+		{ "mData": "gsx$artistwebsite.$t", "visible":false},
 		{ "mData": "gsx$artist.$t"},
+		{ "mData": "gsx$labelname.$t", "visible":false},
+		{ "mData": "gsx$labelwebsite.$t", "visible":false},
 		{ "mData": "gsx$label.$t"},
 		{ "mData": "gsx$releasedate.$t"},
+		{ "mData": "gsx$availableataddress.$t", "visible":false},
 		{ "mData": "gsx$availableat.$t"}
 	]
 	//"iDisplayLength":20
