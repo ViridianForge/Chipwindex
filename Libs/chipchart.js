@@ -3,8 +3,26 @@ $(document).ready(function() {
 
 	// We might need a touch right here to grab the size elements
 	// of the submission form and alter them to better match the screen
-	$("#subForm").width($(window).width()*0.2);
-	$("#subForm").height($(window).height()*0.9);
+	//$("#subForm").width($(window).width()*0.2);
+	//$("#subForm").height($(window).height()*0.9);
+	
+	//Prep the iframe dialog
+	$("#subDialog").dialog({
+		autoOpen: false,
+		show: {
+			effect: "fade",
+			duration: 250
+		},
+		hide: {
+			effect: "fade",
+			duration: 250
+		}
+	});
+		
+	//Prep the button to open the iframe
+	$("sFormButton").click(function(){
+		$("#subDialog").dialog("open");
+	});
 	
 	//Major props on helping figure out populating a DataTables table from Google Sheets to raza
 	//from:  http://datatables.net/forums/discussion/5611/how-to-grab-datatables-data-from-a-google-spreadsheet
