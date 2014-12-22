@@ -10,17 +10,17 @@ $(document).ready(function() {
 	$("#subDialog").dialog({
 		autoOpen: false,
 		show: {
-			effect: "fade",
-			duration: 250
+			effect: "slide",
+			duration: 333
 		},
 		hide: {
-			effect: "fade",
-			duration: 250
+			effect: "slide",
+			duration: 333
 		}
 	});
 		
 	//Prep the button to open the iframe
-	$("sFormButton").click(function(){
+	$("#dialogButton").click(function(){
 		$("#subDialog").dialog("open");
 	});
 	
@@ -45,7 +45,8 @@ $(document).ready(function() {
 		{ "mData": "gsx$label.$t"},
 		{ "mData": "gsx$releasedate.$t"},
 		{ "mData": "gsx$availableataddress.$t", "visible":false},
-		{ "mData": "gsx$availableat.$t"}
+		{ "mData": "gsx$availableat.$t"},
+		{ "mData": "gsx$genre.$t"}
 	]
 	//"iDisplayLength":20
 	//"aoColumsDef": "_all"
