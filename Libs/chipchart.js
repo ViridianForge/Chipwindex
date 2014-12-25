@@ -3,12 +3,16 @@ $(document).ready(function() {
 
 	// We might need a touch right here to grab the size elements
 	// of the submission form and alter them to better match the screen
-	//$("#subForm").width($(window).width()*0.2);
-	//$("#subForm").height($(window).height()*0.9);
+	$("#subForm").width($(window).width()*0.3);
+	$("#subForm").height($(window).height()*0.8);
 	
 	//Prep the iframe dialog
 	$("#subDialog").dialog({
 		autoOpen: false,
+		maxWidth: $(window).width()*0.3,
+		maxHeight: $(window).width()*0.8,
+		width: $(window).width()*0.3,
+		height: $(window).width()*0.8,
 		show: {
 			effect: "slide",
 			duration: 333
@@ -36,17 +40,17 @@ $(document).ready(function() {
 	"sAjaxDataProp":"feed.entry",
 	"sAjaxSource":"https://spreadsheets.google.com/feeds/list/1fSwmSAB-qluTvy8YiTgunHKFbJsKMLg36xDNp8uhFIk/od6/public/values?alt=json",
 	"aoColumns":[
-		{ "mData": "gsx$title.$t"},
-		{ "mData": "gsx$artistname.$t", "visible":false},
-		{ "mData": "gsx$artistwebsite.$t", "visible":false},
-		{ "mData": "gsx$artist.$t"},
-		{ "mData": "gsx$labelname.$t", "visible":false},
-		{ "mData": "gsx$labelwebsite.$t", "visible":false},
-		{ "mData": "gsx$label.$t"},
-		{ "mData": "gsx$releasedate.$t"},
-		{ "mData": "gsx$availableataddress.$t", "visible":false},
-		{ "mData": "gsx$availableat.$t"},
-		{ "mData": "gsx$genre.$t"}
+		{ "title": "Title", "mData": "gsx$title.$t"},
+		{ "title": "Artist Name", "mData": "gsx$artistname.$t", "visible":false},
+		{ "title": "Artist Website", "mData": "gsx$artistwebsite.$t", "visible":false},
+		{ "title": "Artist", "mData": "gsx$artist.$t"},
+		{ "title": "Label Name", "mData": "gsx$labelname.$t", "visible":false},
+		{ "title": "Label Website", "mData": "gsx$labelwebsite.$t", "visible":false},
+		{ "title": "Label", "mData": "gsx$label.$t"},
+		{ "title": "Release Date", "mData": "gsx$releasedate.$t"},
+		{ "title": "Available At Address", "mData": "gsx$availableataddress.$t", "visible":false},
+		{ "title": "Available At", "mData": "gsx$availableat.$t"},
+		{ "title": "Genre", "mData": "gsx$genre.$t", "visible":false}
 	]
 	//"iDisplayLength":20
 	//"aoColumsDef": "_all"
