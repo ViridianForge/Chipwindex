@@ -38,6 +38,10 @@ $(document).ready(function() {
   $('#chipcharttable').DataTable({
     "bServerSide":false,
 	"bProcessing":true,
+	"iDisplayLength":15,
+	"language":{
+		"lengthMenu": "Display <select><option value='10'>10</option><option value='15'>15</option><option value='30'>30</option></select> records per page"
+	},
 	"sAjaxDataProp":"feed.entry",
 	"sAjaxSource":"https://spreadsheets.google.com/feeds/list/1fSwmSAB-qluTvy8YiTgunHKFbJsKMLg36xDNp8uhFIk/od6/public/values?alt=json",
 	"aoColumns":[
