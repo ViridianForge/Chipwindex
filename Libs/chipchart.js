@@ -4,11 +4,12 @@ $(document).ready(function() {
 	// We might need a touch right here to grab the size elements
 	// of the submission form and alter them to better match the screen
 	$("#subForm").width($(window).width()*0.3);
-	$("#subForm").height($(window).height()*0.8);
+	$("#subForm").height($(window).height()*0.9);
 	
 	//Prep the iframe dialog
 	$("#subDialog").dialog({
 		autoOpen: false,
+		modal: true,
 		maxWidth: $(window).width()*0.3,
 		maxHeight: $(window).width()*0.8,
 		width: $(window).width()*0.3,

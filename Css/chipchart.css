@@ -74,6 +74,7 @@ div#instructions{
 	text-align: center;
 	border: 1px solid #333333;
 	border-radius: 4px;
+	box-shadow: 5px 3px 3px #000000;
 }
 
 p#credits{
@@ -83,21 +84,22 @@ p#credits{
 	background: #cccccc;
 	border: 1px solid #333333;
 	border-radius: 4px;
+	box-shadow: 5px 3px 3px #000000;
 	font-style: italic;
 	text-align: center;
 }
 
 button#dialogButton{
 	position: relative;
+	padding: 1%;
 	background: #AA3333;
 	font-family: 'Courier New', courier, monospace;
 	font-weight: bold;
 	color: #cccccc;
-	border-top: 2px solid #cccccc;
-	border-left: 2px solid #cccccc;
+	border-top: 2px solid #aaaaaa;
+	border-left: 2px solid #aaaaaa;
 	border-right: 2px solid #333333;
 	border-bottom: 2px solid #333333;
-	padding: 1%;
 	border-radius: 4px;
 	width: 33%;
 	left: 33%;
@@ -106,6 +108,6 @@ button#dialogButton{
 button#dialogButton:active{
 	border-top: 2px solid #333333;
 	border-left: 2px solid #333333;
-	border-right: 2px solid #cccccc;
-	border-bottom: 2px solid #cccccc;
+	border-right: 2px solid #999999;
+	border-bottom: 2px solid #999999;
 }
