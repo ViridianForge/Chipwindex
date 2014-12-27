@@ -92,7 +92,7 @@ p#credits{
 button#dialogButton{
 	position: relative;
 	padding: 1%;
-	background: #AA3333;
+	background: linear-gradient(to bottom right, #AA4444, #AA3333);
 	font-family: 'Courier New', courier, monospace;
 	font-weight: bold;
 	color: #cccccc;
@@ -107,7 +107,7 @@ button#dialogButton{
 }
 
 button#dialogButton:active{
-	background: #AA6666;
+	background: linear-gradient(to bottom right, #AA3333, #AA4444);
 	border-top: 2px solid #333333;
 	border-left: 2px solid #333333;
 	border-right: 2px solid #999999;
