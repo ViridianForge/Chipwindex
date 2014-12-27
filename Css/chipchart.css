@@ -16,8 +16,8 @@ thead, th {
 	font-weight: bold;
 	color: #cccccc;
 	text-align: center;
-	font-family: 'Courier New', courier, monospace
-	text-shadow: #000000 -2px -1px 1px;
+	font-family: 'Courier New', courier, monospace;
+	text-shadow: #000000 -1px -1px;
 }
 
 /* Logo Bar positioning and styling */
@@ -96,6 +96,7 @@ button#dialogButton{
 	font-family: 'Courier New', courier, monospace;
 	font-weight: bold;
 	color: #cccccc;
+	text-shadow: #000000 -1px -1px;
 	border-top: 2px solid #aaaaaa;
 	border-left: 2px solid #aaaaaa;
 	border-right: 2px solid #333333;
@@ -106,6 +107,7 @@ button#dialogButton{
 }
 
 button#dialogButton:active{
+	background: #AA6666;
 	border-top: 2px solid #333333;
 	border-left: 2px solid #333333;
 	border-right: 2px solid #999999;
