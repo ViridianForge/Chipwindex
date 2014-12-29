@@ -14,7 +14,7 @@ body{
 thead, th {
 	background-color: #AA3333;
 	font-weight: bold;
-	color: #cccccc;
+	color: #dddddd;
 	text-align: center;
 	font-family: 'Courier New', courier, monospace;
 	text-shadow: #000000 -1px -1px;
@@ -95,7 +95,7 @@ button#dialogButton{
 	background: linear-gradient(to bottom right, #AA4444, #AA3333);
 	font-family: 'Courier New', courier, monospace;
 	font-weight: bold;
-	color: #cccccc;
+	color: #dddddd;
 	text-shadow: #000000 -1px -1px;
 	border-top: 2px solid #aaaaaa;
 	border-left: 2px solid #aaaaaa;
