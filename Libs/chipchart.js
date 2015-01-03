@@ -56,9 +56,7 @@ $(document).ready(function() {
 		{ "title": "Available At Address", "mData": "gsx$availableataddress.$t", "visible":false},
 		{ "title": "Available At", "mData": "gsx$availableat.$t"},
 		{ "title": "Genre", "mData": "gsx$genre.$t", "visible":false}
-	]
-	//"iDisplayLength":20
-	//"aoColumsDef": "_all"
-
+	],
+	"aaSorting":[[7,"desc"]]
     });
 });
