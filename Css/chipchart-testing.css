@@ -1,0 +1,259 @@
+/*
+* Chipchart Page styles
+*/
+
+/*
+* Set background image
+*/
+body{
+	width: 100%;
+	height: 100%;
+	background: url("../Images/CW-Side-background-art-redux-ver2.jpg") #000000 top left repeat;
+}
+
+thead, th {
+	background-color: #AA6C39;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+	font-family: 'Courier New', courier, monospace;
+	text-shadow: #000000 -1px -1px;
+	border-top: 2px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+
+/* Logo Bar positioning and styling */
+
+div#header{
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	top: 0%;
+	left: 0%;
+}
+
+div#about-container{
+	position: absolute;
+	display: block;
+	width: 25%;
+	left: 0%;
+	top: 25%;
+	padding-top: 1%;
+}
+
+div#logo-container{
+	position: absolute;
+	display: block;
+	width: 50%;
+	left: 25%;
+	padding-top: 1%;
+}
+
+div#submit-container{
+	position: absolute;
+	display: block;
+	width: 25%;
+	left: 75%;
+	top: 25%;
+	padding-top: 1%;
+}
+
+div#app{
+	position: absolute;
+	width: 100%;
+	top: 10%;
+}
+
+div#footer{
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	top:90%;
+}
+
+div#chiptune-container{
+	position: absolute;
+	display: block;
+	width: 20%;
+	left: 0%;
+	top: 25%;
+}
+
+div#nerdcore-container{
+	position: absolute;
+	display: block;
+	width: 20%;
+	left: 20%;
+	top: 25%;
+}
+
+div#vgm-container{
+	position: absolute;
+	display: block;
+	width: 20%;
+	left: 40%;
+	top: 25%;
+}
+
+div#all-container{
+	position: absolute;
+	display: block;
+	width: 20%;
+	left: 60%;
+	top: 25%;
+}
+
+div#search-container{
+	position: absolute;
+	display: block;
+	width: 20%;
+	left: 80%;
+	top: 25%;
+}
+
+.headerControl {
+	position: relative;
+	padding: 1%;
+	width: 50%;
+	height: 50%;
+	left: 25%;
+	background: linear-gradient(to bottom right, #2D882D, #116611);
+	font-family: 'Courier New', courier, monospace;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 -1px -1px;
+	border-top: 2px solid #88CC88;
+	border-left: 2px solid #88CC88;
+	border-right: 2px solid #004400;
+	border-bottom: 2px solid #004400;
+	border-radius: 180px;
+}
+
+.headerControl:active{
+	background: linear-gradient(to bottom right, #116611, #2D882D);
+	text-shadow: #000000 1px 1px;
+	border-top: 2px solid #004400;
+	border-left: 2px solid #004400;
+	border-right: 2px solid #88CC88;
+	border-bottom: 2px solid #88CC88;
+}
+
+
+.controlUnselected {
+	position: relative;
+	padding: 1%;
+	width: 50%;
+	height: 50%;
+	left: 25%;
+	background: linear-gradient(to bottom right, #2D882D, #116611);
+	font-family: 'Courier New', courier, monospace;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 -1px -1px;
+	border-top: 2px solid #88CC88;
+	border-left: 2px solid #88CC88;
+	border-right: 2px solid #004400;
+	border-bottom: 2px solid #004400;
+	border-radius: 4px;
+}
+
+.controlSelected{
+	position: relative;
+	padding: 1%;
+	width: 50%;
+	height: 50%;
+	left: 25%;
+	font-family: 'Courier New', courier, monospace;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 1px 1px;
+	background: linear-gradient(to bottom right, #116611, #2D882D);
+	border-top: 2px solid #004400;
+	border-left: 2px solid #004400;
+	border-right: 2px solid #88CC88;
+	border-bottom: 2px solid #88CC88;
+	border-radius: 4px;
+}
+
+/* Table positioning and styling */
+
+div#chartdiv{
+	position: relative;
+	text-align: right;
+	width: 90%;
+	top: 5%;
+	left: 5%;
+	padding-top: 2.5%;
+	overflow: auto;
+}
+
+img#logo{
+	position:relative;
+	width: 100%;
+	height: 100px;
+}
+
+/* Instruction positioning and styling */
+
+div#instructions{
+	position: relative;
+	width: 100%;
+	top: 20%;
+	left: 0%;
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	color: #000000;
+}
+
+.instructional{
+	position: relative;
+	left: 10%;
+	width: 80%;
+	background: #cccccc;
+	text-align: center;
+	border: 1px solid #333333;
+	border-radius: 4px;
+	box-shadow: 5px 3px 3px #000000;
+}
+
+p#credits{
+	position: relative;
+	left: 10%;
+	width: 80%;
+	background: #cccccc;
+	border: 1px solid #333333;
+	border-radius: 4px;
+	box-shadow: 5px 3px 3px #000000;
+	font-style: italic;
+	text-align: center;
+}
+
+button#dialogButton{
+	position: relative;
+	padding: 1%;
+	background: linear-gradient(to bottom right, #AA4444, #AA3333);
+	font-family: 'Courier New', courier, monospace;
+	font-weight: bold;
+	color: #dddddd;
+	text-shadow: #000000 -1px -1px;
+	border-top: 2px solid #aaaaaa;
+	border-left: 2px solid #aaaaaa;
+	border-right: 2px solid #333333;
+	border-bottom: 2px solid #333333;
+	border-radius: 4px;
+	width: 33%;
+	left: 33%;
+}
+
+button#dialogButton:active{
+	background: linear-gradient(to bottom right, #AA3333, #AA4444);
+	border-top: 2px solid #333333;
+	border-left: 2px solid #333333;
+	border-right: 2px solid #999999;
+	border-bottom: 2px solid #999999;
+}

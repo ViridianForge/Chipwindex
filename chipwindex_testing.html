@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ChipWIN Index</title>
+    <link rel="stylesheet" id='dataTables-css' media="all" href="Css/jquery.dataTables.testing.css"/>
+	<link rel="stylesheet" id='chipchart-css' media="all" href="Css/chipchart-testing.css"/>
+	<link rel="stylesheet" id='jqui-main' media="all" href="Css/jquery-ui.min.css"/>
+	<link rel="stylesheet" id='jqui-struct' media="all" href="Css/jquery-ui.structure.min.css"/>
+	<link rel="stylesheet" id='jqui-theme' media="all" href="Css/jquery-ui.theme.min.css"/>
+    <script src="Libs/jquery-1.11.1.min.js"></script>
+	<script src="Libs/jquery-ui.min.js"></script>
+    <script src="Libs/jquery.dataTables.min.js"></script>
+    <script src="Libs/chipwindex.js"></script>
+
+</head>
+<body>
+	<div id="header">
+		<div id="about-container">
+			<button id="aboutButton" class="headerControl">?</button>
+		</div>
+		<div id="logo-container">
+			<img id="logo" src='Images/Banner.png'/>
+		</div>
+		<div id="submit-container">
+			<button id="submitButton" class="headerControl">Hey!</button>
+		</div>
+	</div>
+		
+		
+		<!--<div id="instructions">
+			<p class="instructional">
+			The ChipWIN Index (ChipWINdex for short) is an ever growing index of chiptune, VGM, and nerdcore releases put out by the community.  While it is curated by the ChipWIN team, album submissions are open to everyone.
+			</p>
+			<p class="instructional">
+			If there's an album missing from the list, or one that needs information corrected, please
+			click the button below and use the form that pops up to tell us about it.  We'll get the
+			information added or corrected post-haste!
+			</p>
+			<button id="dialogButton">Submit Album Info!</button>
+			<p id="credits">Programmed by: <a href="https://twitter.com/ViridianForge">ViridianForge</a>
+			<br> 
+			Curated by: <a href="https://twitter.com/ViridianForge">ViridianForge</a>, <a href="http://twitter.com/presidenthoodie">President Hoodie</a>, <a href="https://twitter.com/RynMcq">First Lady Ryn</a>, and <a href="https://soundcloud.com/arcticmetal">ArcticMetal</a>
+			</p>
+			
+		</div>
+		
+		<div id="subDialog" title="Submit Album Info!">
+			<iframe id="subForm" src="https://docs.google.com/forms/d/1vcmxB7vk5NN6uX0qSCJV73UZ6f8lvfUy0RlMBF2b05w/viewform?embedded=true" width="275" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+		</div>-->
+	</div>
+	
+	<div id="app">
+		<div id="chartdiv">
+			<table id="chipcharttable" class="display" cellspacing="0">
+			</table>
+		</div>
+	</div>
+	
+	<div id="footer">
+		<div id="chiptune-container">
+			<button id="chiptune" class="controlUnselected" onclick="toggleFilter('#chiptune','chiptunes');">Chiptune</button>
+		</div>
+		<div id="nerdcore-container">
+			<button id="nerdcore" class="controlUnselected" onclick="toggleFilter('#nerdcore','chiptunes');">Nerdcore</button>
+		</div>
+		<div id="vgm-container">
+			<button id="VGM" class="controlUnselected" onclick="toggleFilter('#VGM','chiptunes');">VGM</button>
+		</div>
+		<div id="all-container">
+			<button id="all" class="controlUnselected" onclick="toggleFilter('#all','chiptunes');">All</button>
+		</div>
+		<div id="search-container">
+			<button id="Search" class="controlUnselected" onclick="toggleFilter('chiptune','chiptunes');">Custom Search Placeholder</button>
+		</div>
+	</div>
+</body>
+</html>
