@@ -27,29 +27,6 @@
 			<button id="submitButton" class="headerControl">Hey!</button>
 		</div>
 	</div>
-		
-		
-		<!--<div id="instructions">
-			<p class="instructional">
-			The ChipWIN Index (ChipWINdex for short) is an ever growing index of chiptune, VGM, and nerdcore releases put out by the community.  While it is curated by the ChipWIN team, album submissions are open to everyone.
-			</p>
-			<p class="instructional">
-			If there's an album missing from the list, or one that needs information corrected, please
-			click the button below and use the form that pops up to tell us about it.  We'll get the
-			information added or corrected post-haste!
-			</p>
-			<button id="dialogButton">Submit Album Info!</button>
-			<p id="credits">Programmed by: <a href="https://twitter.com/ViridianForge">ViridianForge</a>
-			<br> 
-			Curated by: <a href="https://twitter.com/ViridianForge">ViridianForge</a>, <a href="http://twitter.com/presidenthoodie">President Hoodie</a>, <a href="https://twitter.com/RynMcq">First Lady Ryn</a>, and <a href="https://soundcloud.com/arcticmetal">ArcticMetal</a>
-			</p>
-			
-		</div>
-		
-		<div id="subDialog" title="Submit Album Info!">
-			<iframe id="subForm" src="https://docs.google.com/forms/d/1vcmxB7vk5NN6uX0qSCJV73UZ6f8lvfUy0RlMBF2b05w/viewform?embedded=true" width="275" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-		</div>-->
-	</div>
 	
 	<div id="app">
 		<div id="chartdiv">
@@ -72,8 +49,27 @@
 			<button id="all" class="controlUnselected" onclick="toggleFilter('#all','chiptunes');">All</button>
 		</div>
 		<div id="search-container">
-			<button id="Search" class="controlUnselected" onclick="toggleFilter('chiptune','chiptunes');">Custom Search Placeholder</button>
+			<label id="filterLabel">Filter: <input id="filterField" name="filter" type="search" /></label>
 		</div>
+	</div>
+	
+	<div id="subDialog" title="Submit Album Info!">
+		<iframe id="subForm" src="https://docs.google.com/forms/d/1vcmxB7vk5NN6uX0qSCJV73UZ6f8lvfUy0RlMBF2b05w/viewform?embedded=true" width="275" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+	</div>
+	
+	<div id="aboutDialog" title="About the ChipWINdex...">
+			<p class="instructional">
+			The ChipWIN Index (ChipWINdex for short) is an ever growing index of chiptune, VGM, and nerdcore releases put out by the community.  While it is curated by the ChipWIN team, album submissions are open to everyone.
+			</p>
+			<p class="instructional">
+			If there's an album missing from the list, or one that needs information corrected, please
+			click the button below and use the form that pops up to tell us about it.  We'll get the
+			information added or corrected post-haste!
+			</p>
+			<p id="credits">Programmed by: <a href="https://twitter.com/ViridianForge">ViridianForge</a>
+			<br> 
+			Curated by: <a href="https://twitter.com/ViridianForge">ViridianForge</a>, <a href="http://twitter.com/presidenthoodie">President Hoodie</a>, <a href="https://twitter.com/RynMcq">First Lady Ryn</a>, and <a href="https://soundcloud.com/arcticmetal"				>ArcticMetal</a>
+			</p>
 	</div>
 </body>
 </html>
