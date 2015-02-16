@@ -1,3 +1,9 @@
+//Globals for search filtering functionality
+var hiddenFilter = '';
+var chipWINDex = null;
+var filtChip = false;
+var filtNerd = false;
+var filtVGM = false;
 
 $(document).ready(function() {
 
@@ -53,7 +59,7 @@ $(document).ready(function() {
 	//Major props on helping figure out populating a DataTables table from Google Sheets to raza
 	//from:  http://datatables.net/forums/discussion/5611/how-to-grab-datatables-data-from-a-google-spreadsheet
 	
-  $('#chipcharttable').DataTable({
+  chipWINDex = $('#chipcharttable').DataTable({
     "bServerSide":false,
 	"bProcessing":true,
 	"sAjaxDataProp":"feed.entry",
@@ -76,17 +82,58 @@ $(document).ready(function() {
 	"bPaginate": false,
 	"info": false
     });
+	
+	$("#filterField").keyup(function(){
+		chipWINDex.search($(this).val()).draw();
+	});
 });
 
 //Toggle filter state based on button press.
 function toggleFilter(button, arg){
-	if($(button).hasClass("controlSelected")){
+	
+	if(button === '#chiptune'){
+		filtChip = !filtChip;
+	}else if(button === '#nerdcore'){
+		filtNerd = !filtNerd;
+	}else if(button === '#VGM'){
+		filtVGM = !filtVGM;
+	}else{
+		filtChip = false;
+		filtNerd = false;
+		filtVGM = false;
+	}
+	
+	if(button === '#all'){
+		//Clear all other buttons
+		$('#chiptune').removeClass("controlSelected");
+		$('#nerdcore').removeClass("controlSelected");
+		$('#VGM').removeClass("controlSelected");
+		$('#chiptune').addClass("controlUnselected");
+		$('#nerdcore').addClass("controlUnselected");
+		$('#VGM').addClass("controlUnselected");
+	}else if($(button).hasClass("controlSelected")){
 		$(button).removeClass("controlSelected");
 		$(button).addClass("controlUnselected");
-		//Remove arg from search terms
-	}else{
+	}else {
 		$(button).removeClass("controlUnselected");
 		$(button).addClass("controlSelected");
-		//Add arg to search terms
 	}
+	
+	genreFilt(filtChip,filtNerd,filtVGM);
+}
+
+function genreFilt(chip,nerd,vgm){
+	var filtString = '';
+	if(chip){
+		filtString+='chiptune ';
+	}
+	if(nerd){
+		filtString+='nerdcore ';
+	}
+	if(vgm){
+		filtString+='vgm ';
+	}
+	console.log(filtString)
+	//filter
+	chipWINDex.search(filtString).draw();
 }
