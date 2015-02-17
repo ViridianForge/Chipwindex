@@ -34,9 +34,9 @@ $(document).ready(function() {
 		autoOpen: false,
 		modal: true,
 		maxWidth: $(window).width()*0.3,
-		maxHeight: $(window).height()*0.8,
+		maxHeight: $(window).height()*0.5,
 		width: $(window).width()*0.3,
-		height: $(window).height()*0.8,
+		height: $(window).height()*0.5,
 		show: {
 			effect: "slide",
 			duration: 333
@@ -59,7 +59,7 @@ $(document).ready(function() {
 	//Major props on helping figure out populating a DataTables table from Google Sheets to raza
 	//from:  http://datatables.net/forums/discussion/5611/how-to-grab-datatables-data-from-a-google-spreadsheet
 	
-  chipWINDex = $('#chipcharttable').DataTable({
+  chipWINDex = $('#chipwindex').DataTable({
     "bServerSide":false,
 	"bProcessing":true,
 	"sAjaxDataProp":"feed.entry",
@@ -78,7 +78,7 @@ $(document).ready(function() {
 		{ "title": "Genre", "mData": "gsx$genre.$t", "visible":false}
 	],
 	"aaSorting":[[7,"desc"]],
-	"sScrollY": Math.floor(($(window).height())*0.65),
+	"sScrollY": Math.floor(($(window).height())*0.70),
 	"bPaginate": false,
 	"info": false
     });
@@ -93,47 +93,45 @@ function toggleFilter(button, arg){
 	
 	if(button === '#chiptune'){
 		filtChip = !filtChip;
+		filtNerd = false;
+		filtVGM = false;
 	}else if(button === '#nerdcore'){
+		filtChip = false;
 		filtNerd = !filtNerd;
-	}else if(button === '#VGM'){
-		filtVGM = !filtVGM;
+		filtVGM = false;
 	}else{
 		filtChip = false;
 		filtNerd = false;
-		filtVGM = false;
+		filtVGM = !filtVGM;
 	}
 	
-	if(button === '#all'){
-		//Clear all other buttons
-		$('#chiptune').removeClass("controlSelected");
-		$('#nerdcore').removeClass("controlSelected");
-		$('#VGM').removeClass("controlSelected");
-		$('#chiptune').addClass("controlUnselected");
-		$('#nerdcore').addClass("controlUnselected");
-		$('#VGM').addClass("controlUnselected");
-	}else if($(button).hasClass("controlSelected")){
-		$(button).removeClass("controlSelected");
-		$(button).addClass("controlUnselected");
-	}else {
+	setButtonState('#chiptune',filtChip);
+	setButtonState('#nerdcore',filtNerd);
+	setButtonState('#VGM',filtVGM);
+		
+	genreFilt(filtChip,filtNerd,filtVGM);
+}
+
+function setButtonState(button, state){
+	if(state){
 		$(button).removeClass("controlUnselected");
 		$(button).addClass("controlSelected");
+	}else{
+		$(button).removeClass("controlSelected");
+		$(button).addClass("controlUnselected");
 	}
-	
-	genreFilt(filtChip,filtNerd,filtVGM);
 }
 
 function genreFilt(chip,nerd,vgm){
 	var filtString = '';
+	chipWINDex.search(filtString).draw();
 	if(chip){
-		filtString+='chiptune ';
+		filtString='chiptune';
+	}else if(nerd){
+		filtString='nerdcore';
+	}else if(vgm){
+		filtString='vgm';
 	}
-	if(nerd){
-		filtString+='nerdcore ';
-	}
-	if(vgm){
-		filtString+='vgm ';
-	}
-	console.log(filtString)
 	//filter
 	chipWINDex.search(filtString).draw();
 }

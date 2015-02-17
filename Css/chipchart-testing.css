@@ -3,6 +3,13 @@
 */
 
 /*
+* Hide the default search box for custom UI
+*/
+.dataTables_filter{
+	display: none;
+}
+
+/*
 * Set background image
 */
 body{
@@ -78,7 +85,7 @@ div#chiptune-container{
 	display: block;
 	width: 20%;
 	left: 0%;
-	top: 25%;
+	padding-top: 2%;
 }
 
 div#nerdcore-container{
@@ -86,7 +93,7 @@ div#nerdcore-container{
 	display: block;
 	width: 20%;
 	left: 20%;
-	top: 25%;
+	padding-top: 2%;
 }
 
 div#vgm-container{
@@ -94,15 +101,7 @@ div#vgm-container{
 	display: block;
 	width: 20%;
 	left: 40%;
-	top: 25%;
-}
-
-div#all-container{
-	position: absolute;
-	display: block;
-	width: 20%;
-	left: 60%;
-	top: 25%;
+	padding-top: 2%;
 }
 
 div#search-container{
@@ -110,12 +109,13 @@ div#search-container{
 	display: block;
 	width: 20%;
 	left: 80%;
-	top: 25%;
+	padding-top: 2%;
 }
 
 label#filterLabel{
 	position:relative;
 	padding: 1%;
+	top: 25%;
 	background: linear-gradient(to bottom right, #2D882D, #116611);
 	font-family: 'Courer New', courier, monospace;
 	font-weight: bold;
@@ -129,15 +129,13 @@ label#filterLabel{
 	border-radius: 4px;
 }
 
-input#filterField{
-}
-
 .headerControl {
 	position: relative;
 	padding: 1%;
 	width: 50%;
 	height: 50%;
 	left: 25%;
+	top: 25%;
 	background: linear-gradient(to bottom right, #2D882D, #116611);
 	font-family: 'Courier New', courier, monospace;
 	font-weight: bold;
@@ -159,7 +157,6 @@ input#filterField{
 	border-right: 2px solid #88CC88;
 	border-bottom: 2px solid #88CC88;
 }
-
 
 .controlUnselected {
 	position: relative;
@@ -233,7 +230,12 @@ div#instructions{
 	position: relative;
 	left: 10%;
 	width: 80%;
-	background: #cccccc;
+	background: #116611;
+	font-family: 'Courier New', courier, monospace;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 1px 1px;
 	text-align: center;
 	border: 1px solid #333333;
 	border-radius: 4px;
@@ -244,7 +246,12 @@ p#credits{
 	position: relative;
 	left: 10%;
 	width: 80%;
-	background: #cccccc;
+	background: #116611;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 1px 1px;
+	text-align: center;
 	border: 1px solid #333333;
 	border-radius: 4px;
 	box-shadow: 5px 3px 3px #000000;
