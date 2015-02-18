@@ -35,9 +35,11 @@ table.dataTable {
   table.dataTable thead .sorting {
     background: url("../images/sort_both.png") no-repeat center right; }
   table.dataTable thead .sorting_asc {
-    background: url("../images/sort_asc.png") no-repeat center right; }
+    background: url("../images/sort_asc.png") #550000 no-repeat center right; 
+	box-shadow: inset 0 0 1em #FFA9A9; }
   table.dataTable thead .sorting_desc {
-    background: url("../images/sort_desc.png") no-repeat center right; }
+    background: url("../images/sort_desc.png") #5500 no-repeat center right; 
+	box-shadow: inset 0 0 1em #FFA9A9; }
   table.dataTable thead .sorting_asc_disabled {
     background: url("../images/sort_asc_disabled.png") no-repeat center right; }
   table.dataTable thead .sorting_desc_disabled {
@@ -45,7 +47,7 @@ table.dataTable {
   table.dataTable tbody tr {
     background-color: #dddddd; }
     table.dataTable tbody tr.selected {
-      background-color: #b0bed9; }
+      background-color: #b0bed9;}
   table.dataTable tbody th,
   table.dataTable tbody td {
     padding: 8px 10px; }
@@ -73,7 +75,7 @@ table.dataTable {
   table.dataTable.hover tbody tr.even:hover, table.dataTable.display tbody tr:hover,
   table.dataTable.display tbody tr.odd:hover,
   table.dataTable.display tbody tr.even:hover {
-    background-color: #d5d5d5; }
+    background-color: #88CC88; }
     table.dataTable.hover tbody tr:hover.selected,
     table.dataTable.hover tbody tr.odd:hover.selected,
     table.dataTable.hover tbody tr.even:hover.selected, table.dataTable.display tbody tr:hover.selected,
@@ -121,7 +123,7 @@ table.dataTable {
   table.dataTable.display tbody tr.even:hover > .sorting_1, table.dataTable.order-column.hover tbody tr:hover > .sorting_1,
   table.dataTable.order-column.hover tbody tr.odd:hover > .sorting_1,
   table.dataTable.order-column.hover tbody tr.even:hover > .sorting_1 {
-    background-color: #cacaca; }
+    background-color: #55AA55; }
   table.dataTable.display tbody tr:hover > .sorting_2,
   table.dataTable.display tbody tr.odd:hover > .sorting_2,
   table.dataTable.display tbody tr.even:hover > .sorting_2, table.dataTable.order-column.hover tbody tr:hover > .sorting_2,

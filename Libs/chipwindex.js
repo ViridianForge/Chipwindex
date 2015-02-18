@@ -77,6 +77,9 @@ $(document).ready(function() {
 		{ "title": "Available At", "mData": "gsx$availableat.$t"},
 		{ "title": "Genre", "mData": "gsx$genre.$t", "visible":false}
 	],
+	"fnInitComplete": function(){
+		$('#chipwindex').find('.dataTables_scrollBody').jScrollPane();
+	},
 	"aaSorting":[[7,"desc"]],
 	"sScrollY": Math.floor(($(window).height())*0.70),
 	"bPaginate": false,
