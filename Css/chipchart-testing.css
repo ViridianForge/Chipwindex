@@ -30,6 +30,11 @@ thead, th {
 	border-right: 1px solid #000000;
 }
 
+tr{
+	text-align: center;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
 /* Logo Bar positioning and styling */
 
 div#header{

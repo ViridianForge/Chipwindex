@@ -75,12 +75,13 @@ $(document).ready(function() {
 		{ "title": "Release Date", "mData": "gsx$releasedate.$t"},
 		{ "title": "Available At Address", "mData": "gsx$availableataddress.$t", "visible":false},
 		{ "title": "Available At", "mData": "gsx$availableat.$t"},
-		{ "title": "Genre", "mData": "gsx$genre.$t", "visible":false}
+		{ "title": "Genre", "mData": "gsx$genre.$t", "visible":false},
+		{ "title": "Genre", "mData": "gsx$badge.$t" }
 	],
-	"fnInitComplete": function(){
-		$('#chipwindex').find('.dataTables_scrollBody').jScrollPane();
-	},
 	"aaSorting":[[7,"desc"]],
+	"fnInitComplete": function(){
+		$(".dataTables_scrollBody").jScrollPane();
+	},
 	"sScrollY": Math.floor(($(window).height())*0.70),
 	"bPaginate": false,
 	"info": false
@@ -89,6 +90,8 @@ $(document).ready(function() {
 	$("#filterField").keyup(function(){
 		chipWINDex.search($(this).val()).draw();
 	});
+	
+	
 });
 
 //Toggle filter state based on button press.

@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>ChipWIN Index</title>
+	<link rel="icon" type="image/png" href="Images/v3logo.png" >
     <link rel="stylesheet" id='dataTables-css' media="all" href="Css/jquery.dataTables.testing.css"/>
 	<link rel="stylesheet" id='chipchart-css' media="all" href="Css/chipchart-testing.css"/>
 	<link rel="stylesheet" id='jqui-main' media="all" href="Css/jquery-ui.min.css"/>
@@ -15,6 +16,7 @@
     <script src="Libs/jquery.dataTables.min.js"></script>
 	<script src="Libs/jquery.jscrollpane.min.js"></script>
     <script src="Libs/chipwindex.js"></script>
+	<script src="Libs/jquery.mousewheel.js"></script>
 
 </head>
 <body>
@@ -39,13 +41,13 @@
 	
 	<div id="footer">
 		<div id="chiptune-container">
-			<button id="chiptune" class="controlUnselected" onclick="toggleFilter('#chiptune','chiptunes');">Chiptune</button>
+			<button id="chiptune" class="controlUnselected" onclick="toggleFilter('#chiptune','chiptunes');"><img style="float:left;" src="Images/chiptune.png">Chiptune</img></button>
 		</div>
 		<div id="nerdcore-container">
-			<button id="nerdcore" class="controlUnselected" onclick="toggleFilter('#nerdcore','nerdcore');">Nerdcore</button>
+			<button id="nerdcore" class="controlUnselected" onclick="toggleFilter('#nerdcore','nerdcore');"><img style="float:left;" src="Images/nerdcore.png">Nerdcore</img></button>
 		</div>
 		<div id="vgm-container">
-			<button id="VGM" class="controlUnselected" onclick="toggleFilter('#VGM','VGM');">VGM</button>
+			<button id="VGM" class="controlUnselected" onclick="toggleFilter('#VGM','VGM');"><img style="float:left;" height=20 width=20 src="Images/VGM.png">VGM</img></button>
 		</div>
 		<div id="search-container">
 			<label id="filterLabel">Filter: <input id="filterField" name="filter" type="search" /></label>

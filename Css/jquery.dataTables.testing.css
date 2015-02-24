@@ -33,17 +33,17 @@ table.dataTable {
     cursor: pointer;
     *cursor: hand; }
   table.dataTable thead .sorting {
-    background: url("../images/sort_both.png") no-repeat center right; }
+    background: url("../Images/sort_both.png") no-repeat center right; }
   table.dataTable thead .sorting_asc {
-    background: url("../images/sort_asc.png") #C80500 no-repeat center right; 
+    background: url("../Images/sort_asc.png") #C80500 no-repeat center right; 
 	box-shadow: inset 0 0 1em #C86000; }
   table.dataTable thead .sorting_desc {
-    background: url("../images/sort_desc.png") #C80500 no-repeat center right; 
+    background: url("../Images/sort_desc.png") #C80500 no-repeat center right; 
 	box-shadow: inset 0 0 1em #C86000; }
   table.dataTable thead .sorting_asc_disabled {
-    background: url("../images/sort_asc_disabled.png") no-repeat center right; }
+    background: url("../Images/sort_asc_disabled.png") no-repeat center right; }
   table.dataTable thead .sorting_desc_disabled {
-    background: url("../images/sort_desc_disabled.png") no-repeat center right; }
+    background: url("../Images/sort_desc_disabled.png") no-repeat center right; }
   table.dataTable tbody tr {
     background-color: #dddddd; }
     table.dataTable tbody tr.selected {
