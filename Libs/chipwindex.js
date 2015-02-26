@@ -5,6 +5,13 @@ var filtChip = false;
 var filtNerd = false;
 var filtVGM = false;
 
+$(window).resize(function (){
+	var tabSettings = chipWINDex.settings();
+	tabSettings = tabSettings[0];
+	tabSettings.oScroll.sY = $(window).height()*0.7;
+	chipWINDex.draw();
+});
+
 $(document).ready(function() {
 
 	// We might need a touch right here to grab the size elements
