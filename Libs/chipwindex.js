@@ -6,22 +6,25 @@ var filtNerd = false;
 var filtVGM = false;
 
 $(window).resize(function (){
-	console.log("Is this happening?")
-	var tabSettings = chipWINDex.settings();
-	tabSettings = tabSettings[0];
+	//console.log("Is this happening?")
+	//var tabSettings = chipWINDex.settings();
+	//tabSettings = tabSettings[0];
 	//Set height of the scroll portion of the table to match the new window height
-	tabSettings.oScroll.sY = $(window).height()*0.7;
+	//tabSettings.oScroll.sY = $(window).height()*0.7;
 	//Adjust the widths of the columns to match the new column widths
-	console.log($(window).width());
-	console.log($(window).width()*0.27);
-	chipWINDex.column(0).width = $(window).width()*0.27;
-	chipWINDex.column(3).width = $(window).width()*0.225;
-	chipWINDex.column(6).width = $(window).width()*0.225;
-	chipWINDex.column(7).width = $(window).width()*0.09;
-	chipWINDex.column(9).width = $(window).width()*0.045;
-	chipWINDex.column(11).width = $(window).width()*0.045;
+	//console.log($(window).width());
+	//console.log($(window).width()*0.27);
+	//chipWINDex.column(0).width = $(window).width()*0.27;
+	//chipWINDex.column(3).width = $(window).width()*0.225;
+	//chipWINDex.column(6).width = $(window).width()*0.225;
+	//chipWINDex.column(7).width = $(window).width()*0.09;
+	//chipWINDex.column(9).width = $(window).width()*0.045;
+	//chipWINDex.column(11).width = $(window).width()*0.045;
 	//Also, might need to drop certain columns in the face of certain widths.
-	chipWINDex.draw();
+	//chipWINDex.draw();
+	
+	//Gonna try just directly manipulating the DOM elements
+	//$('.dataTables_wrapper').css('height',($(window).height()*0.7));
 });
 
 $(document).ready(function() {
@@ -79,24 +82,24 @@ $(document).ready(function() {
 	//from:  http://datatables.net/forums/discussion/5611/how-to-grab-datatables-data-from-a-google-spreadsheet
 	
   chipWINDex = $('#chipwindex').DataTable({
+	responsive: true,
     "bServerSide":false,
 	"bProcessing":true,
-	"bAutoWidth":false,
 	"sAjaxDataProp":"feed.entry",
 	"sAjaxSource":"https://spreadsheets.google.com/feeds/list/1fSwmSAB-qluTvy8YiTgunHKFbJsKMLg36xDNp8uhFIk/od6/public/values?alt=json",
 	"aoColumns":[
-		{ "title": "Title", "mData": "gsx$title.$t", "width": "30%"},
-		{ "title": "Artist Name", "mData": "gsx$artistname.$t", "visible":false},
-		{ "title": "Artist Website", "mData": "gsx$artistwebsite.$t", "visible":false},
-		{ "title": "Artist", "mData": "gsx$artist.$t", "width": "25%"},
-		{ "title": "Label Name", "mData": "gsx$labelname.$t", "visible":false},
-		{ "title": "Label Website", "mData": "gsx$labelwebsite.$t", "visible":false},
-		{ "title": "Label", "mData": "gsx$label.$t", "width": "25%"},
-		{ "title": "Release Date", "mData": "gsx$releasedate.$t", "width": "10%"},
-		{ "title": "Available At Address", "mData": "gsx$availableataddress.$t", "visible":false},
-		{ "title": "Available At", "mData": "gsx$availableat.$t", "width": "5%"},
-		{ "title": "Genre", "mData": "gsx$genre.$t", "visible":false},
-		{ "title": "Genre", "mData": "gsx$badge.$t", "width": "5%" }
+		{ "title": "Title", "mData": "gsx$title.$t", className: 'all'},
+		{ "title": "Artist Name", "mData": "gsx$artistname.$t", "visible":false, className: 'never'},
+		{ "title": "Artist Website", "mData": "gsx$artistwebsite.$t", "visible":false, className: 'never'},
+		{ "title": "Artist", "mData": "gsx$artist.$t", className: 'all'},
+		{ "title": "Label Name", "mData": "gsx$labelname.$t", "visible":false, className: 'never'},
+		{ "title": "Label Website", "mData": "gsx$labelwebsite.$t", "visible":false, className: 'never'},
+		{ "title": "Label", "mData": "gsx$label.$t", className: 'min-tablet'},
+		{ "title": "Release Date", "mData": "gsx$releasedate.$t", className: 'not-mobile'},
+		{ "title": "Available At Address", "mData": "gsx$availableataddress.$t", "visible":false, className: 'never'},
+		{ "title": "Available At", "mData": "gsx$availableat.$t", className: 'all'},
+		{ "title": "Genre", "mData": "gsx$genre.$t", "visible":false, className: 'never'},
+		{ "title": "Genre", "mData": "gsx$badge.$t", className: 'not-mobile'}
 	],
 	"aaSorting":[[7,"desc"]],
 	"fnInitComplete": function(){
