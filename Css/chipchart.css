@@ -3,6 +3,13 @@
 */
 
 /*
+* Hide the default search box for custom UI
+*/
+.dataTables_filter{
+	display: none;
+}
+
+/*
 * Set background image
 */
 body{
@@ -12,29 +19,187 @@ body{
 }
 
 thead, th {
-	background-color: #AA3333;
+	background-color: #9C0400;
 	font-weight: bold;
-	color: #dddddd;
+	color: #ffffff;
 	text-align: center;
 	font-family: 'Courier New', courier, monospace;
 	text-shadow: #000000 -1px -1px;
+	border-top: 2px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+
+tr{
+	text-align: center;
+	font-family: Tahoma, Geneva, sans-serif;
 }
 
 /* Logo Bar positioning and styling */
 
-div#banner{
+div#header{
 	position: absolute;
-	width: 20%;
-	top: 3%;
-	left: 3%;
+	width: 100%;
+	height: 10%;
+	top: 0%;
+	left: 0%;
+}
+
+div#about-container{
+	position: absolute;
+	display: block;
+	width: 25%;
+	left: 0%;
+	top: 25%;
+	padding-top: 1%;
+}
+
+div#logo-container{
+	position: absolute;
+	display: block;
+	width: 50%;
+	left: 25%;
+	padding-top: 1%;
+}
+
+div#submit-container{
+	position: absolute;
+	display: block;
+	width: 25%;
+	left: 75%;
+	top: 25%;
+	padding-top: 1%;
 }
 
 div#app{
 	position: absolute;
-	margin-left: 1%;
-	width: 80%;
-	top: 3%;
+	width: 100%;
+	height: 80%;
+	top: 10%;
+}
+
+div#footer{
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	top:90%;
+}
+
+div#chiptune-container{
+	position: absolute;
+	display: block;
+	width: 20%;
+	left: 0%;
+	padding-top: 2%;
+}
+
+div#nerdcore-container{
+	position: absolute;
+	display: block;
+	width: 20%;
+	left: 20%;
+	padding-top: 2%;
+}
+
+div#vgm-container{
+	position: absolute;
+	display: block;
+	width: 20%;
+	left: 40%;
+	padding-top: 2%;
+}
+
+div#search-container{
+	position: absolute;
+	display: block;
+	width: 20%;
+	left: 80%;
+	padding-top: 2%;
+}
+
+label#filterLabel{
+	position:relative;
+	padding: 1%;
+	top: 25%;
+	background: linear-gradient(to bottom right, #1268DE, #0754BE);
+	font-family: 'Courer New', courier, monospace;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 1px 1px;
+	border-top: 2px solid #6198E4;
+	border-left: 2px solid #6198E4;
+	border-right: 2px solid #063E8B;
+	border-bottom: 2px solid #063E8B;
+	border-radius: 4px;
+}
+
+.headerControl {
+	position: relative;
+	padding: 1%;
+	width: 50%;
+	height: 50%;
 	left: 25%;
+	top: 25%;
+	background: linear-gradient(to bottom right, #1268DE, #0754BE);
+	font-family: 'Courier New', courier, monospace;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 -1px -1px;
+	border-top: 2px solid #6198E4;
+	border-left: 2px solid #6198E4;
+	border-right: 2px solid #063E8B;
+	border-bottom: 2px solid #063E8B;
+	border-radius: 180px;
+}
+
+.headerControl:active{
+	background: linear-gradient(to bottom right, #0754BE, #1268DE);
+	text-shadow: #000000 1px 1px;
+	border-top: 2px solid #063E8B;
+	border-left: 2px solid #063E8B;
+	border-right: 2px solid #6198E4;
+	border-bottom: 2px solid #6198E4;
+}
+
+.controlUnselected {
+	position: relative;
+	padding: 1%;
+	width: 50%;
+	height: 50%;
+	left: 25%;
+	background: linear-gradient(to bottom right, #1268DE, #0754BE);
+	font-family: 'Courier New', courier, monospace;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 -1px -1px;
+	border-top: 2px solid #6198E4;
+	border-left: 2px solid #6198E4;
+	border-right: 2px solid #063E8B;
+	border-bottom: 2px solid #063E8B;
+	border-radius: 4px;
+}
+
+.controlSelected{
+	position: relative;
+	padding: 1%;
+	width: 50%;
+	height: 50%;
+	left: 25%;
+	font-family: 'Courier New', courier, monospace;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 1px 1px;
+	background: linear-gradient(to bottom right, #0754BE, #1268DE);
+	border-top: 2px solid #063E8B;
+	border-left: 2px solid #063E8B;
+	border-right: 2px solid #6198E4;
+	border-bottom: 2px solid #6198E4;
+	border-radius: 4px;
+	box-shadow: 0 0 2em #FF891C;
 }
 
 /* Table positioning and styling */
@@ -43,8 +208,9 @@ div#chartdiv{
 	position: relative;
 	text-align: right;
 	width: 90%;
-	top: 0%;
-	left: 0%;
+	left: 5%;
+	padding-top: 2.5%;
+	overflow: auto;
 }
 
 img#logo{
@@ -70,18 +236,27 @@ div#instructions{
 	position: relative;
 	left: 10%;
 	width: 80%;
-	background: #cccccc;
+	background: #1268DE;
+	font-family: 'Courier New', courier, monospace;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 1px 1px;
 	text-align: center;
-	border: 1px solid #333333;
+	border: 1px solid #6198E4;
 	border-radius: 4px;
-	box-shadow: 5px 3px 3px #000000;
 }
 
 p#credits{
 	position: relative;
 	left: 10%;
 	width: 80%;
-	background: #cccccc;
+	background: #1268DE;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 1px 1px;
+	text-align: center;
 	border: 1px solid #333333;
 	border-radius: 4px;
 	box-shadow: 5px 3px 3px #000000;
