@@ -106,7 +106,7 @@ $(document).ready(function() {
 	],
 	"aaSorting":[[7,"desc"]],
 	"fnInitComplete": function(){
-		$(".dataTables_scrollBody").jScrollPane({showArrows: true});
+		$(".dataTables_scrollBody").jScrollPane({showArrows: true, arrowScrollOnHover: true});
 	},
 	"sScrollY": Math.floor(($(window).height())*0.70),
 	"bPaginate": false,
