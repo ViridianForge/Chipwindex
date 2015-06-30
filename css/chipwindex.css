@@ -1,0 +1,338 @@
+/*
+* Chipchart Page styles
+*/
+
+@font-face {
+  font-family: "chickenscratch";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/ChickScrAOE.ttf");
+}
+
+@font-face {
+  font-family: "VT323";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/VT323-Regular.ttf"),
+	url("http://fonts.gstatic.com/s/vt323/v7/lo_L7yCDHYN9FAxvMCI1vQ.woff2") format("woff2"), 
+	url("http://fonts.gstatic.com/s/vt323/v7/LfMzj2MWAZU6qzlnp1MNbg.woff") format("woff");
+}
+
+/*
+* Hide the default search box for custom UI
+*/
+.dataTables_filter{
+	display: none;
+}
+
+/*
+* Set background image
+*/
+body{
+	width: 100%;
+	height: 100%;
+	font-family: "VT323", Arial, Helvetica, sans-serif;
+	background-image: url('../images/Chip_BG.png'), 
+	linear-gradient(90deg, rgba(254,0,2,1) 0%, 
+		rgba(255,135,2,1) 15%, 
+		rgba(252,229,3,1) 30%, 
+		rgba(254,255,5,1) 45%, 
+		rgba(1,254,111,1) 60%, 
+		rgba(22,254,134,1) 75%, 
+		rgba(2,201,234,1) 90%, 
+		rgba(1,255,255,1) 100%);
+	overflow: hidden;
+}
+
+thead, th {
+	background-color: #9C0400;
+	font-family: "VT323", Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+	text-shadow: #000000 -1px -1px;
+	border-top: 2px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+
+tr{
+	text-align: center;
+	font-family: "VT323", Arial, Helvetica, sans-serif;
+	font-size: large;
+}
+
+/* Logo Bar positioning and styling */
+
+div#header{
+	position: absolute;
+	width: 100%;
+	height: 10%;
+	top: 0%;
+	left: 0%;
+}
+
+div#about-container{
+	position: absolute;
+	display: block;
+	font-family: "VT323", Arial, Helvetica, sans-serif;
+	width: 25%;
+	left: 0%;
+	top: 25%;
+	padding-top: 1%;
+}
+
+div#logo-container{
+	position: absolute;
+	display: block;
+	font-family: "chickenscratch", Arial, Helvetica, sans-serif;
+	font-size: 2.75em;
+	letter-spacing: 0.125em;
+	color: white;
+	text-shadow: 8px 8px 2px black;
+	text-align: center;
+	width: 50%;
+	left: 25%;
+	top: -40%;
+}
+
+#logo-text{
+	background: rgba(170, 187, 160, 0.5);
+	border: 1px solid black; 
+	border-radius: 10px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+div#submit-container{
+	position: absolute;
+	display: block;
+	width: 25%;
+	left: 75%;
+	top: 25%;
+	padding-top: 1%;
+}
+
+div#app{
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	top: 10%;
+}
+
+div#footer{
+	position: absolute;
+	font-family: "VT323", Arial, Helvetica, sans-serif;
+	width: 100%;
+	height: 10%;
+	top:90%;
+}
+
+div#chiptune-container{
+	position: absolute;
+	display: block;
+	font-family: "VT323", Arial, Helvetica, sans-serif;
+	width: 20%;
+	left: 0%;
+	padding-top: 2%;
+}
+
+div#nerdcore-container{
+	position: absolute;
+	display: block;
+	font-family: "VT323", Arial, Helvetica, sans-serif;
+	width: 20%;
+	left: 20%;
+	padding-top: 2%;
+}
+
+div#vgm-container{
+	position: absolute;
+	display: block;
+	font-family: "VT323", Arial, Helvetica, sans-serif;
+	width: 20%;
+	left: 40%;
+	padding-top: 2%;
+}
+
+div#search-container{
+	position: absolute;
+	display: block;
+	width: 20%;
+	height: 50%;
+	left: 80%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+label#filterLabel{
+	position:relative;
+	padding: 1%;
+	top: 25%;
+	background: linear-gradient(to bottom right, #1268DE, #0754BE);
+	/*font-weight: bold;*/
+	font-size: x-large;
+	color: #ffffff;
+	text-shadow: #000000 1px 1px;
+	border-top: 2px solid #6198E4;
+	border-left: 2px solid #6198E4;
+	border-right: 2px solid #063E8B;
+	border-bottom: 2px solid #063E8B;
+	border-radius: 4px;
+}
+
+.headerControl {
+	position: relative;
+	padding: 1%;
+	width: 50%;
+	height: 50%;
+	left: 25%;
+	top: 25%;
+	background: linear-gradient(to bottom right, #1268DE, #0754BE);
+	/*font-weight: bold;*/
+	font-size: x-large;
+	font-family: "VT323", Arial, Helvetica, sans-serif;
+	color: #ffffff;
+	text-shadow: #000000 -1px -1px;
+	border-top: 2px solid #6198E4;
+	border-left: 2px solid #6198E4;
+	border-right: 2px solid #063E8B;
+	border-bottom: 2px solid #063E8B;
+	border-radius: 180px;
+}
+
+.headerControl:active{
+	background: linear-gradient(to bottom right, #0754BE, #1268DE);
+	text-shadow: #000000 1px 1px;
+	border-top: 2px solid #063E8B;
+	border-left: 2px solid #063E8B;
+	border-right: 2px solid #6198E4;
+	border-bottom: 2px solid #6198E4;
+}
+
+.controlUnselected {
+	position: relative;
+	padding: 1%;
+	width: 50%;
+	height: 50%;
+	left: 25%;
+	background: linear-gradient(to bottom right, #1268DE, #0754BE);
+	font-family: "VT323", Arial, Helvetica, sans-serif;
+	/*font-weight: bold;*/
+	font-size: x-large;
+	color: #ffffff;
+	text-shadow: #000000 -1px -1px;
+	border-top: 2px solid #6198E4;
+	border-left: 2px solid #6198E4;
+	border-right: 2px solid #063E8B;
+	border-bottom: 2px solid #063E8B;
+	border-radius: 4px;
+}
+
+.controlSelected{
+	position: relative;
+	padding: 1%;
+	width: 50%;
+	height: 50%;
+	left: 25%;
+	font-family: "VT323", Arial, Helvetica, sans-serif;
+	/*font-weight: bold;*/
+	font-size: x-large;
+	color: #ffffff;
+	text-shadow: #000000 1px 1px;
+	background: linear-gradient(to bottom right, #0754BE, #1268DE);
+	border-top: 2px solid #063E8B;
+	border-left: 2px solid #063E8B;
+	border-right: 2px solid #6198E4;
+	border-bottom: 2px solid #6198E4;
+	border-radius: 4px;
+	box-shadow: 0 0 2em #FF891C;
+}
+
+/* Table positioning and styling */
+
+div#chartdiv{
+	position: relative;
+	text-align: right;
+	width: 95%;
+	left: 2.5%;
+	padding-top: 2.5%;
+	overflow: auto;
+}
+
+img#logo{
+	position:relative;
+	width: 100%;
+	height: 100px;
+}
+
+/* Instruction positioning and styling */
+
+div#instructions{
+	position: relative;
+	width: 100%;
+	top: 20%;
+	left: 0%;
+	background: #ffffff;
+	border: 1px solid #cccccc;
+	border-radius: 4px;
+	color: #000000;
+}
+
+.instructional{
+	position: relative;
+	left: 10%;
+	width: 80%;
+	background: #1268DE;
+	font-family: 'Courier New', courier, monospace;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 1px 1px;
+	text-align: center;
+	border: 1px solid #6198E4;
+	border-radius: 4px;
+}
+
+p#credits{
+	position: relative;
+	left: 10%;
+	width: 80%;
+	background: #1268DE;
+	font-weight: bold;
+	font-size: large;
+	color: #ffffff;
+	text-shadow: #000000 1px 1px;
+	text-align: center;
+	border: 1px solid #333333;
+	border-radius: 4px;
+	box-shadow: 5px 3px 3px #000000;
+	font-style: italic;
+	text-align: center;
+}
+
+button#dialogButton{
+	position: relative;
+	padding: 1%;
+	background: linear-gradient(to bottom right, #AA4444, #AA3333);
+	font-family: "VT323", Arial, Helvetica, sans-serif;
+	/*font-weight: bold;*/
+	color: #dddddd;
+	text-shadow: #000000 -1px -1px;
+	border-top: 2px solid #aaaaaa;
+	border-left: 2px solid #aaaaaa;
+	border-right: 2px solid #333333;
+	border-bottom: 2px solid #333333;
+	border-radius: 4px;
+	width: 33%;
+	left: 33%;
+}
+
+button#dialogButton:active{
+	background: linear-gradient(to bottom right, #AA3333, #AA4444);
+	border-top: 2px solid #333333;
+	border-left: 2px solid #333333;
+	border-right: 2px solid #999999;
+	border-bottom: 2px solid #999999;
+}
